@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MorphoTools</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/header4.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header_navbar">
+                <div class="header_navbar-logo">
+                    <h1 class="header_navbar-logo-title">MorphoTools</h1>
+                </div>
+                <div class="header_navbar-menu">
+                    <button class="btn">Toolbox</button>
+                    <input type="file" multiple onchange="showFile()" accept="image/*">
+                    <button class="btn">Export</button>
+                </div>
+                <div class="header_navbar-toggle">
+                    <span class="header_navbar-toggle-icons"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="preview"></ul>
+    <p id="status"></p>
+    <div><img id="output"></div>
+    <button id="btn" onclick="initGraph(cy, input)">Load Images </button>
+    <button id="btn" onclick="expandGraph(cy)">Expand Edges </button>
+    <button id="btn" onclick="retractGraph(cy)">Retract Edges </button>
+    <button id="btn" onclick="filterEdges(cy)">Filter Edges </button>
+    <button id="btn" onclick="nodePositions(cy)">Refresh positions </button>
+    <button id="btn" onclick="exportJPG(cy)">Export JPG</button>
+    <button id="btn" onclick="exportGraphJSON(cy)">Export JSON</button>
+    <button id="btn" onclick="importJSON(cy,input)">Import JSON</button>
+    <button id="btn" onclick="function decodingJPG()">Test</button>
+    <div id="cy"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/cytoscape.min.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/code1.js"></script>
+    <script src="js/code2.js"></script>
+    <script src="https://unpkg.com/merge-images"></script>
+</body>
+
+</html>
